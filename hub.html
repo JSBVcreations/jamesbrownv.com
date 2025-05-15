@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HexGlobe</title>
+  <style>
+    body { margin: 0; background: url('mask.jpg') no-repeat center center fixed; background size: cover; overflow: hidden; }
+    #globeViz { position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1;}
+  </style>
+</head>
+<body>
+  <div id="globeViz"></div>
+
+  <!-- Include Three.js and Globe.gl -->
+  <script src="https://unpkg.com/three"></script>
+  <script src="https://unpkg.com/globe.gl"></script>
+  <script>
+  const hexData = [
+        {
+        lat: 41.2793,
+        lng: 72.5984,
+        name: '05.09.2025',
+        category: 'blog',
+        url: '05.09.2025.html'
+        }
+  ];
+
+  const categoryColors = {
+        blog: 'rgba(255, 0, 0, 0.6)',
+        photo: 'rgba(0, 0, 255, 0.6)'
+  };
+
+  const world = Globe()
+        .globeImageUrl(null)
+        .backgroundColor('rgba(0,0,0,0)')
+        .showAtmosphere(true)
+        .atmosphereColor('#3a228a')
+        .atmosphereAltitude(0.25)
+        .pointsData(hexData)
+        .pointLat(d => d.lat)
+        .pointLng(d => d.lng)
+        .pointColor(d => categoryColors[d.category])
+        .pointAltitude(0.01)
+        .pointRadius(3.1)
+        .onPointClick(d => {
+        if (d.url) window.location.href = d.url;
+        });
+
+  world(document.getElementById('globeViz'));
+</script>
+</body>
+</html>

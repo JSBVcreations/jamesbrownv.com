@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JSBV</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: white;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .background-reel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: max-content;
+      height: 100%;
+      display: flex;
+      animation: scrollReel 60s linear infinite;
+      z-index: 0;
+    }
+
+    .background-reel img {
+      height: 100%;
+      width: auto;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+
+    @keyframes scrollReel {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .text-overlay {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      font-size: 5em;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      -webkit-text-stroke: 2px black;
+      text-stroke: 2px black; /* Fallback for non-webkit (not widely supported yet) */
+      width: 100vw;              /* Full screen width */
+      white-space: nowrap;       /* Keep text on one line */
+      padding: 0 2vw;            /* Optional: small padding on edges */
+      box-sizing: border-box;
+    }
+
+    .text-overlay .large {
+        font-size: clamp(2rem, 6vw, 5rem);
+    }
+
+    .text-overlay .small {
+         font-size: clamp(1rem, 3vw, 2.5rem);
+    }
+
+    .text-overlay a.small {
+        color: white;                  /* maintain white fill */
+     -webkit-text-stroke: 2px black;
+        text-stroke: 2px black;
+        text-decoration: none;         /* remove underline */
+        cursor: pointer;               /* show it’s clickable */
+    }
+    .text-overlay a.small:hover {
+        opacity: 0.8;                  /* subtle hover effect */
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Reel BG -->
+  <div class="background-reel">
+    <img src="photo1.jpg" />
+    <img src="photo2.jpg" />
+    <img src="photo3.jpg" />
+    <img src="photo4.jpg" />
+    <img src="photo5.jpg" />
+    <!-- Repeat again to make smooth loop -->
+    <img src="photo1.jpg" />
+    <img src="photo2.jpg" />
+    <img src="photo3.jpg" />
+    <img src="photo4.jpg" />
+    <img src="photo5.jpg" />
+  </div>
+
+  <!-- Outlined Text -->
+  <div class="text-overlay">
+     <span class="large">jamesbrownv.com</span><br>
+     <a href="/hub.html" <span class="small">currently a work in progress</a>
+  </div>
+
+</body>
+</html>
