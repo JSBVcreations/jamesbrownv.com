@@ -1,0 +1,23 @@
+name: Deploy to DreamHost
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.7.0
+      with:
+        ssh-private-key: ${{ secrets.DREAMHOST_SSH_KEY }}
+
+    - name: Sync files to DreamHost via SFTP
+      run: |
+        rsync -avz --delete --exclude '.git*' ./ dh_c7z8d3@iad1-shared-b8-23.dreamhost.com:~/jamesbrownv.com
