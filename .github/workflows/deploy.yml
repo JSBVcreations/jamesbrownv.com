@@ -18,7 +18,9 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.DREAMHOST_SSH_KEY }}
 
-    - name: Upload via rsync over SSH
-      run: |
-        rsync -avz --delete --exclude '.git*' ./ \
-        ${{ secrets.DREAMHOST_USERNAME }}@${{ secrets.DREAMHOST_HOST }}:${{ secrets.DREAMHOST_REMOTE_PATH }}
+   - name: Upload via rsync over SSH
+  run: |
+    mkdir -p ~/.ssh
+    echo -e "Host *\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+    rsync -avz --delete --exclude '.git*' ./ \
+      "$DREAMHOST_USERNAME@$DREAMHOST_HOST:$DREAMHOST_REMOTE_PATH"
