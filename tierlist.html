@@ -1,0 +1,81 @@
+<!-- tierlist.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tier List</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #111;
+      color: white;
+      margin: 0;
+      padding: 1rem;
+    }
+    .tier {
+      margin-bottom: 2rem;
+    }
+    .tier h2 {
+      margin: 0 0 0.5rem 0;
+      font-size: 2rem;
+    }
+    .item-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .item {
+      background: #222;
+      border: 1px solid #444;
+      padding: 1rem;
+      border-radius: 6px;
+      min-width: 200px;
+      max-width: 300px;
+    }
+    .item h3 {
+      margin: 0 0 0.3rem 0;
+      font-size: 1.1rem;
+    }
+    .item p {
+      font-size: 0.9rem;
+      margin: 0.2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tier List</h1>
+  <div id="tierlist"></div>
+
+<script>
+fetch('./data/tierdata.json')
+  .then(res => res.json())
+  .then(data => {
+    const tiers = ['S', 'A', 'B', 'C', 'D', 'F'];
+    const container = document.getElementById('tierlist');
+
+    tiers.forEach(tier => {
+      const section = document.createElement('div');
+      section.className = 'tier';
+      section.innerHTML = `<h2>${tier} Tier</h2><div class="item-row" id="tier-${tier}"></div>`;
+      container.appendChild(section);
+    });
+
+    data.forEach(item => {
+      const target = document.getElementById(`tier-${item.Tier}`);
+      if (!target) return;
+      const card = document.createElement('div');
+      card.className = 'item';
+      card.innerHTML = `
+        <h3>${item.Title}</h3>
+        <p><strong>${item.Medium}</strong> – ${item.Series}</p>
+        <p><em>${item.Genre}</em></p>
+        <p>Rating: ${item.Rating}</p>
+      `;
+      target.appendChild(card);
+    });
+  })
+  .catch(err => console.error("Failed to load tier data:", err));
+</script>
+</body>
+</html>

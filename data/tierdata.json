@@ -1,0 +1,156 @@
+[
+  {
+    "Medium": "film",
+    "Series": "Star Wars",
+    "Title": "Star Wars: Episode III - Revenge of the Sith",
+    "Tier": "S",
+    "Rating": "95",
+    "Genre": "sci-fi",
+    "Sub-Genre": "space-opera",
+    "Qualifier": "Modern",
+    "Tags": "energy weapons, genocide, political intrigue, corruption"
+  },
+  {
+    "Medium": "film",
+    "Series": "Star Wars",
+    "Title": "Star Wars: Episode IV - A New Hope",
+    "Tier": "A",
+    "Rating": "90",
+    "Genre": "sci-fi",
+    "Sub-Genre": "space-opera",
+    "Qualifier": "Classic",
+    "Tags": ""
+  },
+  {
+    "Medium": "film",
+    "Series": "Star Wars",
+    "Title": "Star Wars: Episode VI - Return of the Jedi",
+    "Tier": "B",
+    "Rating": "80",
+    "Genre": "sci-fi",
+    "Sub-Genre": "space-opera",
+    "Qualifier": "Classic",
+    "Tags": ""
+  },
+  {
+    "Medium": "film",
+    "Series": "Star Wars",
+    "Title": "Star Wars: Episode I - The Phantom Menace",
+    "Tier": "S",
+    "Rating": "75",
+    "Genre": "sci-fi",
+    "Sub-Genre": "space-opera",
+    "Qualifier": "Classic",
+    "Tags": ""
+  },
+  {
+    "Medium": "film",
+    "Series": "Star Wars",
+    "Title": "Star Wars: Episode II - Attack of the Clones",
+    "Tier": "D",
+    "Rating": "70",
+    "Genre": "sci-fi",
+    "Sub-Genre": "space-opera",
+    "Qualifier": "",
+    "Tags": ""
+  },
+  {
+    "Medium": "film",
+    "Series": "Star Wars",
+    "Title": "Star Wars: Episode V - The Empire Strikes Back",
+    "Tier": "S",
+    "Rating": "90",
+    "Genre": "sci-fi",
+    "Sub-Genre": "space-opera",
+    "Qualifier": "",
+    "Tags": ""
+  },
+  {
+    "Medium": "film",
+    "Series": "Star Wars",
+    "Title": "Rogue One:  A Star Wars Story",
+    "Tier": "S",
+    "Rating": "99",
+    "Genre": "sci-fi",
+    "Sub-Genre": "military-thriller",
+    "Qualifier": "",
+    "Tags": ""
+  },
+  {
+    "Medium": "film",
+    "Series": "Star Wars",
+    "Title": "Solo: A Star Wars Story",
+    "Tier": "",
+    "Rating": "",
+    "Genre": "",
+    "Sub-Genre": "",
+    "Qualifier": "",
+    "Tags": ""
+  },
+  {
+    "Medium": "film",
+    "Series": "Star Wars",
+    "Title": "Star Wars: Episode VII - The Force Awakens",
+    "Tier": "",
+    "Rating": "",
+    "Genre": "",
+    "Sub-Genre": "space-opera",
+    "Qualifier": "adequate impersonation",
+    "Tags": ""
+  },
+  {
+    "Medium": "film",
+    "Series": "Star Wars",
+    "Title": "Star Wars: Episode VIII - The Last Jedi",
+    "Tier": "",
+    "Rating": "",
+    "Genre": "",
+    "Sub-Genre": "space-opera",
+    "Qualifier": "fetid horse-shit",
+    "Tags": ""
+  },
+  {
+    "Medium": "film",
+    "Series": "Star Wars",
+    "Title": "Star Wars: Episode IX - The Rise of Skywalker",
+    "Tier": "",
+    "Rating": "",
+    "Genre": "",
+    "Sub-Genre": "space-opera",
+    "Qualifier": "slop",
+    "Tags": ""
+  },
+  {
+    "Medium": "film",
+    "Series": "Star Wars",
+    "Title": "",
+    "Tier": "",
+    "Rating": "",
+    "Genre": "",
+    "Sub-Genre": "",
+    "Qualifier": "",
+    "Tags": ""
+  },
+  {
+    "Medium": "television",
+    "Series": "Star Wars",
+    "Title": "Andor",
+    "Tier": "S",
+    "Rating": "99",
+    "Genre": "sci-fi",
+    "Sub-Genre": "political-thriller",
+    "Qualifier": "second-to-none, the essence of star wars",
+    "Tags": "conspiracy, facism, hope"
+  },
+  {
+    "Medium": "television",
+    "Series": "Star Wars",
+    "Title": "The Mandalorian - Season 1",
+    "Tier": "A",
+    "Rating": "88",
+    "Genre": "sci-fi",
+    "Sub-Genre": "western",
+    "Qualifier": "",
+    "Tags": ""
+  }
+]
