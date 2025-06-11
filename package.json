@@ -1,5 +1,27 @@
 {
   "dependencies": {
     "csvtojson": "^2.0.10"
-  }
+  },
+  "name": "jamesbrownv.com",
+  "version": "1.0.0",
+  "description": "I'm new to coding, as well as github, this is the repository for my personal blog.  This is a note to test my workflow Another note to test 6/10/25 5:13pm a word",
+  "main": "index.js",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.1"
+  },
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/JSBVcreations/jamesbrownv.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JSBVcreations/jamesbrownv.com/issues"
+  },
+  "homepage": "https://github.com/JSBVcreations/jamesbrownv.com#readme"
 }
