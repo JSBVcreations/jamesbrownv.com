@@ -60,7 +60,12 @@
     }
 
     .text-overlay .small {
-         font-size: clamp(1rem, 3vw, 2.5rem);
+      font-size: clamp(1rem, 3vw, 2.5rem);
+      white-space: normal;          /* ✅ allow wrapping */
+      word-break: break-word;       /* ✅ clean breaks */
+      display: inline-block;        /* ✅ allows controlled layout */
+      max-width: 90vw;              /* ✅ prevent overrun */
+      text-align: center;
     }
 
     .text-overlay a.small {
